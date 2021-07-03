@@ -8,4 +8,8 @@
   <color name="teal">#3ac2af</color>  <!-- Grey -->
   <color name="brownish"> #fdebd0 </color>  <!-- Grey -->
   <color name="green"> #17a589 </color>  <!-- Grey -->
+  <color name="golden">#ed8910</color>
+  <color name="white">#FFFFFF</color>
+  <color name="red">#FE1748</color>
+  <color name="black">#000000</color>
 </resources>

@@ -11,29 +11,46 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/app_bar"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          app:layout_constraintTop_toTopOf="parent">
+        <include
+            android:id="@+id/toolbar_home_frag"
+            layout="@layout/toolbar_home"/>
+        
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:text="Most Popular In Foods"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_home_frag"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-            <androidx.appcompat.widget.Toolbar
-              android:id="@+id/toolbar_home_frag"
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:theme="@style/ToolBarTheme"
-              app:layout_scrollFlags="enterAlways|scroll" />
+<!--        <com.google.android.material.appbar.AppBarLayout-->
+<!--            android:id="@+id/app_bar"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="wrap_content"-->
+<!--          app:layout_constraintTop_toTopOf="parent">-->
 
-        </com.google.android.material.appbar.AppBarLayout>
+<!--            <androidx.appcompat.widget.Toolbar-->
+<!--              android:id="@+id/toolbar_home_frag"-->
+<!--              android:layout_width="wrap_content"-->
+<!--              android:layout_height="wrap_content"-->
+<!--              android:theme="@style/ToolBarTheme"-->
+<!--              app:layout_scrollFlags="enterAlways|scroll" />-->
+
+<!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            tools:listitem="@layout/item_home_rv"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/app_bar"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
             android:scrollbars="vertical"
             app:layoutManager="LinearLayoutManager"/>
 

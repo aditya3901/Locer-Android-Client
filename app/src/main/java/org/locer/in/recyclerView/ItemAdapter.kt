@@ -14,9 +14,11 @@ class ItemAdapter(private val popularFoodList: List<PopularFood>) :
     //This class is holding all the views that we want to display in a container of recycler view
     class ItemViewHolder(private val binding: ItemHomeRvBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: PopularFood) {
-            binding.popularItemName.text = item.name
-            binding.popularItemDescription.text = item.description
-            binding.popularItemImage.setImageResource(item.image)
+            binding.apply {
+                popularItemName.text = item.name
+                popularItemDescription.text = item.description
+                popularItemImage.setImageResource(item.image)
+            }
         }
     }
 
@@ -30,7 +32,7 @@ class ItemAdapter(private val popularFoodList: List<PopularFood>) :
     }
 
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        val currentItem = popularFoodList[position]
-        holder.bind(currentItem)
+        val item = popularFoodList[position]
+        holder.bind(item)
     }
 }

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools">
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -20,7 +19,8 @@
                 android:background="@drawable/demo_image"
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/popular_item_name"
@@ -43,8 +43,8 @@
                 android:layout_marginEnd="10dp"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/popular_item_image"
-                app:layout_constraintStart_toStartOf="@+id/popular_item_image"
+                app:layout_constraintEnd_toEndOf="@id/popular_item_image"
+                app:layout_constraintStart_toStartOf="@id/popular_item_image"
                 app:layout_constraintTop_toBottomOf="@id/popular_item_name"
                 tools:text="Enjoy the best chowmin in town with superfast" />
 
@@ -55,7 +55,7 @@
                 android:background="@drawable/shape_round_rectangle"
                 android:backgroundTint="#FFFFFF"
                 android:padding="10dp"
-                android:text="Order now!"
+                android:text="@string/order_now"
                 android:textColor="#ed8910"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

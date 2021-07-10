@@ -19,27 +19,12 @@
             android:id="@+id/most_popular_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
+            android:textSize="@dimen/textSize20sp"
+            android:layout_margin="@dimen/margin10dp"
             android:textColor="@color/black"
-            android:text="Most Popular In Foods"
+            android:text="@string/most_popular_in_foods"
             app:layout_constraintTop_toBottomOf="@id/toolbar_home_frag"
             app:layout_constraintStart_toStartOf="parent"/>
-
-        <!--        <com.google.android.material.appbar.AppBarLayout-->
-        <!--            android:id="@+id/app_bar"-->
-        <!--          android:layout_width="match_parent"-->
-        <!--          android:layout_height="wrap_content"-->
-        <!--          app:layout_constraintTop_toTopOf="parent">-->
-
-        <!--            <androidx.appcompat.widget.Toolbar-->
-        <!--              android:id="@+id/toolbar_home_frag"-->
-        <!--              android:layout_width="wrap_content"-->
-        <!--              android:layout_height="wrap_content"-->
-        <!--              android:theme="@style/ToolBarTheme"-->
-        <!--              app:layout_scrollFlags="enterAlways|scroll" />-->
-
-        <!--        </com.google.android.material.appbar.AppBarLayout>-->
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

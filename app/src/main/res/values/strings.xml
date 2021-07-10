@@ -21,6 +21,24 @@
     <string name="affirmation9">Things will unfold at precisely the right time.</string>
     <string name="affirmation10">I will be present in all the moments that this day brings.</string>
     <string name="order_now">Order now!</string>
+    <string name="most_popular_in_foods">Most Popular In Foods</string>
+    <string name="search">Search</string>
+    <string name="cart_fragment">Cart Fragment</string>
+    <string name="laundry_fragment">Laundry Fragment</string>
+    <string name="or">or</string>
+    <string name="sign_up_with_google">Sign Up With Google</string>
+    <string name="sign_up_with_facebook">Sign Up With Facebook</string>
+    <string name="signup">SignUp</string>
+    <string name="login">Login</string>
+    <string name="email_id_phone">Email id/Phone</string>
+    <string name="email_id">Email Id</string>
+    <string name="password">Password</string>
+    <string name="first_name">First Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="i_agree_by_the_terms_and_conditions">I agree by the terms and conditions</string>
+    <string name="last_name">Last Name</string>
+    <string name="wishlist_fragment">Wishlist Fragment</string>
 
 
 </resources>

@@ -36,7 +36,6 @@ class HomeFragment : Fragment() {
 
         homeViewModel.products.observe(viewLifecycleOwner) {
             productAdapter.submitList(it)
-            Log.i("Rohit Data", it.toString())
         }
 
         homeBoundLayout.recyclerView.apply {

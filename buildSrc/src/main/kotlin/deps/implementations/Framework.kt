@@ -28,6 +28,16 @@ object Framework {
 //    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:${Framework.lifecycleVersion}"
 //    const val lifecycleCoRoutines = "androidx.lifecycle:lifecycle-livedata-ktx:${Framework.lifecycleVersion}"
 
+    // Lifecycle + ViewModel & LiveData
+    const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Framework.lifeCycleVersion}"
+    const val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Framework.lifeCycleVersion}"
+    const val lifeCycle = "android.arch.lifecycle:common-java8:${Framework.lifeCycleVersion}"
+
+    // Dagger Hilt
+    const val daggerHiltGradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:${Framework.hiltVersion}"
+    const val daggerHilt = "com.google.dagger:hilt-android:${Framework.hiltVersion}"
+    const val daggerHiltCompiler = "com.google.dagger:hilt-compiler:${Framework.hiltVersion}"
+    const val daggerHiltLifeCycle = "androidx.hilt:hilt-lifecycle-viewmodel:${Framework.hiltAndroidXVersion}"
 
     // Firebase Deps
     const val firebaseServices = "com.google.gms:google-services:${Framework.firebaseServices}"

@@ -1,19 +1,23 @@
 package org.locer.`in`
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import dagger.hilt.android.AndroidEntryPoint
 import org.locer.`in`.databinding.FragmentHomeBinding
 import org.locer.`in`.recyclerView.ItemAdapter
-import org.locer.`in`.utils.PopularFood
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private lateinit var homeBoundLayout: FragmentHomeBinding
+    private val homeViewModel by viewModels<HomeViewModel>()
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -28,10 +32,15 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val item = PopularFood("Chowmin", "Enjoy the best chowmin in town with superfast", R.drawable.demo_image)
-        val list = arrayListOf(item, item, item, item, item)
+        val productAdapter = ItemAdapter()
+
+        homeViewModel.products.observe(viewLifecycleOwner) {
+            productAdapter.submitList(it)
+            Log.i("Rohit Data", it.toString())
+        }
+
         homeBoundLayout.recyclerView.apply {
-            adapter = ItemAdapter(list)
+            adapter = productAdapter
             layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
         }
 

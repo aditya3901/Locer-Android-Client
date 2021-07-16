@@ -10,6 +10,9 @@ object BuildPlugins {
     const val kotlinAndroidExtensions = "kotlin-android-extensions"
     const val kotlinKapt = "kotlin-kapt"
 
+    // Dagger-Hilt
+    const val daggerHiltAndroidPlugin = "dagger.hilt.android.plugin"
+
     const val navSafeArgsPlugin = "androidx.navigation.safeargs.kotlin"
     const val crashlyticsPlugin = "com.google.firebase.crashlytics"
 

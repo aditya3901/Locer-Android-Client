@@ -3,6 +3,9 @@ import deps.App
 import deps.implementations.Framework.appCompat
 import deps.implementations.Framework.constraintLayout
 import deps.implementations.Framework.coordLayout
+import deps.implementations.Framework.daggerHilt
+import deps.implementations.Framework.daggerHiltCompiler
+import deps.implementations.Framework.daggerHiltLifeCycle
 import deps.implementations.Framework.drawerLayout
 import deps.implementations.Framework.firebaseAnalyticsKtx
 import deps.implementations.Framework.firebaseAuth
@@ -10,13 +13,18 @@ import deps.implementations.Framework.firebaseBom
 import deps.implementations.Framework.firebaseCrashlyticsKtx
 import deps.implementations.Framework.gsonConverter
 import deps.implementations.Framework.introScreen
-import deps.implementations.Framework.materialDesign
+import deps.implementations.Framework.lifeCycle
+import deps.implementations.Framework.liveData
 import deps.implementations.Framework.multiDex
 import deps.implementations.Framework.navFragment
 import deps.implementations.Framework.navRuntime
 import deps.implementations.Framework.navUi
 import deps.implementations.Framework.retrofit
 import deps.implementations.Framework.sharedPreferences
+import deps.implementations.Framework.viewModel
+import deps.implementations.KtServices.ktCoRoutines
+import deps.implementations.KtServices.ktCoRoutinesAndroid
+import deps.implementations.KtServices.ktCoRoutinesPlayServices
 import deps.implementations.KtServices.ktx
 import deps.implementations.TestingFramework.androidxTestExt
 import deps.implementations.TestingFramework.espressoCore
@@ -34,6 +42,7 @@ plugins {
     id(coreplugins.BuildPlugins.firebasePlugin)
     id(coreplugins.BuildPlugins.navSafeArgsPlugin)
     id(coreplugins.BuildPlugins.crashlyticsPlugin)
+    id(coreplugins.BuildPlugins.daggerHiltAndroidPlugin)
 }
 
 android {
@@ -117,6 +126,21 @@ dependencies {
 //    implementation(materialDesign) // was causing some problem, 
   // see: https://github.com/njaLocer/Locer-Android-Client/pull/33#issuecomment-751405014
     implementation(multiDex)
+
+    // Coroutines
+    implementation(ktCoRoutines)
+    implementation(ktCoRoutinesAndroid)
+    implementation(ktCoRoutinesPlayServices)
+
+    // Lifecycle + ViewModel & LiveData
+    implementation(viewModel)
+    implementation(liveData)
+    implementation(lifeCycle)
+
+    // Dagger Hilt
+    implementation(daggerHilt)
+    kapt(daggerHiltCompiler)
+    implementation(daggerHiltLifeCycle)
 
     // Firebase Essential
     implementation(platform(firebaseBom))

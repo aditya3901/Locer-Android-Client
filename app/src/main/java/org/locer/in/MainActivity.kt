@@ -13,11 +13,13 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 import org.locer.`in`.HomeFragmentDirections.Companion.actionHomeFragmentToSignupFragment
 import org.locer.`in`.databinding.ActivityMainBinding
 
 private const val TAG = "MainActivity"
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private val sharedPreferenceUtil by lazy { SharedPreferenceUtil(context = this) }

@@ -15,6 +15,13 @@ object Framework {
     const val sharedPreferences = "1.1.0"
     const val retrofit = "2.9.0"
 
+    // Lifecycle + ViewModel & LiveData
+    const val lifeCycleVersion = "2.3.1"
+
+    // Dagger
+    const val hiltVersion = "2.31-alpha"
+    const val hiltAndroidXVersion = "1.0.0-alpha03"
+
     // Firebase
     const val firebaseServices = "4.3.4"
     const val firebaseBom = "25.12.0"

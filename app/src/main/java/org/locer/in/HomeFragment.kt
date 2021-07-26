@@ -1,7 +1,6 @@
 package org.locer.`in`
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +35,6 @@ class HomeFragment : Fragment() {
 
         homeViewModel.products.observe(viewLifecycleOwner) {
             productAdapter.submitList(it)
-            Log.i("Rohit Data", it.toString())
         }
 
         homeBoundLayout.recyclerView.apply {

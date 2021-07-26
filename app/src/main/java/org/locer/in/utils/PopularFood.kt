@@ -1,8 +1,12 @@
 package org.locer.`in`.utils
 
+import com.google.gson.annotations.SerializedName
+
 data class PopularFood(
-    val __v: Int,
-    val _id: String,
+    @SerializedName("__v")
+    val version: Int,
+    @SerializedName("_id")
+    val id: String,
     val countInStock: Int,
     val createdAt: String,
     val description: String,

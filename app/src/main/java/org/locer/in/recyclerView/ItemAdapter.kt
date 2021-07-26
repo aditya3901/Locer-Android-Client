@@ -17,7 +17,7 @@ class ItemAdapter :
     companion object {
         private val POPULAR_FOOD_COMPARATOR = object: DiffUtil.ItemCallback<PopularFood>() {
             override fun areItemsTheSame(oldItem: PopularFood, newItem: PopularFood): Boolean {
-                return oldItem._id == newItem._id
+                return oldItem.id == newItem.id
             }
 
             override fun areContentsTheSame(oldItem: PopularFood, newItem: PopularFood): Boolean {

@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 1
          
       - name: Build all configurations
-        run: ./gradlew assemble
+        run: ./gradlew assembleDebug
 
       - name: Upload APK as Artifacts
         uses: actions/upload-artifact@v2.2.0

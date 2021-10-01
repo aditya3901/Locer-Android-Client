@@ -1,0 +1,23 @@
+name: Pull requests
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+         
+      - name: Build all configurations
+        run: ./gradlew assemble
+
+      - name: Upload APK as Artifacts
+        uses: actions/upload-artifact@v2.2.0
+        with:
+          name: locer-android
+          path: |
+            **/*.apk

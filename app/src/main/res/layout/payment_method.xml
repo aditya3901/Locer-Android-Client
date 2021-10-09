@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Payment Method"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/back_btn"/>
+
+    <TextView
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_border"
+        android:id="@+id/cod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Cash on Delivery"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_cod"
+        android:drawablePadding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/back_btn"/>
+    <TextView
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_border"
+        android:id="@+id/upi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="E-Wallet / UPI"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_wallet"
+        android:drawablePadding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cod"/>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/upi"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_margin="15dp"
+        android:drawableLeft="@drawable/ic_cod"
+        android:text="Delivery Address"
+        android:drawablePadding="8dp"/>
+
+    <TextView
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_border"
+        android:id="@+id/home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Home Address"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_home"
+        android:drawablePadding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1"/>
+    <TextView
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_border"
+        android:id="@+id/office"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Office Address"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_office"
+        android:drawablePadding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home"/>
+    <EditText
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_border"
+        android:id="@+id/address1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Address 1"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_map"
+        android:drawablePadding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/office"/>
+    <EditText
+        android:gravity="center_vertical"
+        android:background="@drawable/edit_text_border"
+        android:id="@+id/address2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Address 2"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:padding="15dp"
+        android:drawableLeft="@drawable/ic_map"
+        android:drawablePadding="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address1"/>
+
+    <androidx.cardview.widget.CardView
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#21B6A8"
+        android:layout_margin="14dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Payment"
+            android:textSize="16sp"
+            android:padding="14dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

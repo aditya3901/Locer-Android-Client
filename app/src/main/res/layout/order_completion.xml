@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="56dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/animationView"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/orderconfirmed"/>
+
+    <Button
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/track"
+        android:background="@drawable/edit_text_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Track Order"
+        android:drawableStart="@drawable/ic_baseline_pin_drop_24"
+        android:drawableTint="#DC143C"
+        android:drawablePadding="8dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/animationView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/returnHome"/>
+
+    <Button
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:id="@+id/returnHome"
+        android:background="@drawable/edit_text_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return Home"
+        android:drawableStart="@drawable/home_24px"
+        android:drawableTint="@color/green"
+        android:drawablePadding="8dp"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/animationView"
+        app:layout_constraintLeft_toRightOf="@id/track"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/similarRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="5dp"
+        tools:listitem="@layout/item_parent_rv"
+        android:scrollbars="vertical"
+        android:orientation="horizontal"
+        app:layoutManager="LinearLayoutManager"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

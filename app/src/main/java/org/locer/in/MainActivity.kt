@@ -1,9 +1,11 @@
 package org.locer.`in`
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ActionMode
 import androidx.databinding.DataBindingUtil
@@ -30,9 +32,12 @@ class MainActivity : AppCompatActivity() {
         NavController.OnDestinationChangedListener { controller, destination, bundle -> actionMode?.finish() }
 
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d(TAG, "onCreate: log check!")
+
+        window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 
         boundLayout = DataBindingUtil.setContentView(this, R.layout.activity_main)
         if (!sharedPreferenceUtil.showIntro()) {

@@ -17,8 +17,8 @@
     <item
       android:id="@+id/laundry_fragment"
       android:enabled="true"
-      android:icon="@drawable/local_laundry_service_black_18dp"
-      android:title="Laundry"
+      android:icon="@drawable/ic_baseline_widgets_24"
+      android:title="Category"
       app:showAsAction="never" />
 
     <item

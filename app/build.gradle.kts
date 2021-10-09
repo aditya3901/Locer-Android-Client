@@ -1,6 +1,7 @@
 import coreplugins.BuildPlugins.absoluteRawKotlin
 import deps.App
 import deps.implementations.Framework.appCompat
+import deps.implementations.Framework.carousel
 import deps.implementations.Framework.constraintLayout
 import deps.implementations.Framework.coordLayout
 import deps.implementations.Framework.drawerLayout
@@ -10,6 +11,7 @@ import deps.implementations.Framework.firebaseBom
 import deps.implementations.Framework.firebaseCrashlyticsKtx
 import deps.implementations.Framework.gsonConverter
 import deps.implementations.Framework.introScreen
+import deps.implementations.Framework.lottie
 import deps.implementations.Framework.materialDesign
 import deps.implementations.Framework.multiDex
 import deps.implementations.Framework.navFragment
@@ -95,8 +97,6 @@ android {
 
 }
 
-
-
 dependencies {
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
@@ -133,4 +133,7 @@ dependencies {
     testImplementation(junit4)
     androidTestImplementation(espressoCore)
     androidTestImplementation(androidxTestExt)
+
+    implementation(lottie)
+    implementation(carousel)
 }

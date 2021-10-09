@@ -42,6 +42,9 @@ object Framework {
 
     // Multi-Dex Support
     const val multiDex = "androidx.multidex:multidex:${Framework.multiDex}"
+
+    const val lottie = "com.airbnb.android:lottie:3.4.0"
+    const val carousel = "com.synnapps:carouselview:0.1.5"
 }
 
 /* Activate the commented out deps when they are need to be in use and use their most stable version not the latest one */

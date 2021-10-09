@@ -6,58 +6,102 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_rectangle_bottom_round">
+        android:layout_marginTop="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:id="@+id/hamburgerIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_marginTop="@dimen/margin_small"
-                android:src="@drawable/ic_baseline_sort_24"
+                android:tint="@color/black"
+                android:src="@drawable/ic_baseline_dehaze_24"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="ContentDescription" />
 
-            <ImageView
-                android:id="@+id/profile_imageView"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="@dimen/margin_medium"
-                android:layout_marginTop="@dimen/margin_small"
-                android:src="@drawable/ic_baseline_account_circle_24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:id="@+id/search_textView"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cart_card"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/search"
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="#E8E8E8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small">
+                <TextView
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/cart_icon"
+                    android:text="0"
+                    android:textSize="16sp"
+                    android:drawablePadding="4dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/wishlist_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="8dp"
+                android:backgroundTint="#E8E8E8"
+                app:layout_constraintEnd_toStartOf="@id/cart_card"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="@dimen/margin_small">
+                <TextView
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/favorite_black_18dp"
+                    android:text="0"
+                    android:textSize="16sp"
+                    android:drawablePadding="4dp"/>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:src="@drawable/driver"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/hamburgerIcon"
+                app:layout_constraintRight_toLeftOf="@id/cart_card"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:id="@+id/hi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintLeft_toLeftOf="@id/logo"
+                app:layout_constraintRight_toRightOf="@id/logo"
+                android:text="Hi, Raushan"
                 android:textStyle="bold"
-                android:textSize="@dimen/text_medium"
-                app:layout_constraintStart_toEndOf="@id/imageView"
-                app:layout_constraintTop_toBottomOf="@id/imageView"/>
+                android:textColor="#292929"
+                android:textSize="20sp"/>
 
             <androidx.appcompat.widget.SearchView
+                app:queryBackground="@color/transparent"
                 android:id="@+id/searchView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_large"
-                android:layout_marginTop="@dimen/margin_small"
+                android:layout_height="45dp"
+                android:layout_marginTop="14dp"
+                app:layout_goneMarginBottom="14dp"
                 android:layout_marginEnd="@dimen/margin_large"
-                app:defaultQueryHint="@string/search"
+                app:defaultQueryHint="Search"
                 app:iconifiedByDefault="false"
                 android:layout_marginBottom="@dimen/margin_small"
                 android:background="@drawable/shape_searchview"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/search_textView" />
+                app:layout_constraintLeft_toLeftOf="@id/hamburgerIcon"
+                app:layout_constraintRight_toRightOf="@id/cart_card"
+                app:layout_constraintTop_toBottomOf="@id/hi" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

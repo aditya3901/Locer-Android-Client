@@ -11,64 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_cart_frag"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/closeIcon"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:tint="@color/black"
-                    android:src="@drawable/ic_baseline_close_24"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    tools:ignore="ContentDescription" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/profile_imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardCornerRadius="8dp"
-                    android:backgroundTint="#E8E8E8"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:layout_marginEnd="16dp">
-                    <TextView
-                        android:padding="3dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/cart_icon"
-                        android:text="0"
-                        android:textSize="16sp"
-                        android:drawablePadding="4dp"/>
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/hi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/closeIcon"
-                    app:layout_constraintRight_toLeftOf="@id/profile_imageView"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    android:text="Personal Cart"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#292929"
-                    android:textSize="18sp"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">

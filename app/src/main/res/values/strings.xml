@@ -39,5 +39,7 @@
     <string name="agreement_to_terms">I agree by the terms and conditions</string>
     <string name="last_name">Last Name</string>
     <string name="wishlist_fragment_title">Wishlist Fragment</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
 
 </resources>

@@ -22,13 +22,6 @@ class WishlistFragment : Fragment() {
     ): View? {
         wishlistBoundLayout =
             DataBindingUtil.inflate(inflater, R.layout.fragment_wishlist, container, false)
-        val toolbar = wishlistBoundLayout.toolbarWishlistFrag
-        val activity = activity as MainActivity
-        activity.setSupportActionBar(toolbar)
-        activity.supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(false)
-            setTitle("Wishlist Fragment")
-        }
         return wishlistBoundLayout.root
     }
 }

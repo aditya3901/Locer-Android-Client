@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/Item_1"
+            android:title="Your Orders"
+            android:icon="@drawable/home_24px"/>
+        <item
+            android:id="@+id/Item_2"
+            android:title="Recipes"
+            android:icon="@drawable/favorite_black_18dp"/>
+        <item
+            android:id="@+id/Item_3"
+            android:title="Locer Express"
+            android:icon="@drawable/ic_baseline_insights_24"/>
+
+        <item android:title="More">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/settings"
+                        android:title="Settings"
+                        android:icon="@drawable/ic_baseline_settings_24"/>
+                    <item
+                        android:id="@+id/help"
+                        android:icon="@drawable/ic_baseline_help_outline_24"
+                        android:title="Help Center"/>
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="Communication">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/rate"
+                        android:title="Rate Us"
+                        android:icon="@drawable/ic_baseline_star_rate_24"/>
+                    <item
+                        android:id="@+id/feedback"
+                        android:icon="@drawable/ic_baseline_feedback_24"
+                        android:title="Feedback"/>
+                </group>
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/logout"
+            android:title="Logout"
+            android:icon="@drawable/ic_baseline_login_24"/>
+    </group>
+
+</menu>

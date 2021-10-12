@@ -6,12 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.synnapps.carouselview.ImageListener
 import org.locer.`in`.databinding.FragmentHistoryBinding
-import org.locer.`in`.recyclerView.ParentAdapter
-import org.locer.`in`.utils.SimilarItem
-import org.locer.`in`.utils.SimilarItemCategory
 
 /**
  * Authored by Ayush Shrivastava on 23/8/20
